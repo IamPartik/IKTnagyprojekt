@@ -1,11 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Költségek becslése</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            user-select: none;
+        }
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 40px;
+        }
+        h3 {
+            text-align: center;
+            font-size: 22px;
+            font-weight: normal;
+        }
+        p {
+            font-size: 20px;
+        }
+        a {
+            font-size: large;
+            color: white;
+            text-decoration: none;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        ol {
+            font-size: 20px;
+        }
+        .modszerek, .strategiak {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px; 
+            margin-top: 10px;
+            border-color: rgb(0, 0, 0);
+        }
+        button {
+            margin: auto;
+            display: flex;
+        
+        }
+        .modszerek h4, .strategiak h4 {
+            font-size: 22px;
+            text-decoration: underline;
+        }
+        .modszerek p, .strategiak p {
+            font-size: 18px;
+        }
+        .unsel {
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Költségek becslése</h1>
+    <br>
+    <div class="container unsel">
+    <center>
+        <a href="index.html"><button type="button" class="btn btn-primary">Kezdőoldal</button></a>
+        <a href="bemutatkozás.html"><button type="button" class="btn btn-primary">Bemutatkozás</button></a>
+        <a href="cpm.html"><button type="button" class="btn btn-primary">CPM</button></a>
+        <a href="mpm.html"><button type="button" class="btn btn-primary">MPM</button></a>
+        <a href="Kockázatelemzés.html"><button type="button" class="btn btn-primary">Kockázatelemzés</button></a>
+        <a href="Kiegyensúlyozás.html"><button type="button" class="btn btn-primary">Kiegyensúlyozás</button></a>
+        <a href="Költségek becslése.html"><button type="button" class="btn btn-primary">Költségek becslése</button></a>
+        <a href="források.html"><button type="button" class="btn btn-primary">Források</button></a>
+        <a href="Projektdokumentáció.html"><button type="button" class="btn btn-primary">Projektdokumentáció</button></a>
+    </center>
+    </div>
+    <hr align="center" style="height: 5px; width: 100%;">
+
+<p>A projektek tervezése során elengedhetetlen a költségek előrejelzése, hiszen a rendelkezésre álló pénzügyi források határozzák meg a kivitelezés lehetőségeit. A becslések célja az idő- és költségkeretek meghatározása, azonban ezek soha nem teljesen pontosak, hanem hozzávetőleges értékeket adnak.</p>
+
+<h2>A becslések pontossági szintjei:</h2>
+<ul>
+<li>Durva becslés – Gyors, nagy eltéréseket tartalmazó módszer, amely arra szolgál, hogy eldöntsük, érdemes-e részletesebb vizsgálatot végezni.</li>
+<li>Nagyságrendi becslés (ROM – Rough Order of Magnitude) – Korábbi projektek adatait alapul véve készül, de jelentős eltérések lehetnek a tényleges költségekhez képest.</li>
+<li>Részletes becslés – Lentről felfelé történő elemzés, amely pontosabb, de időigényesebb, mivel minden egyes feladat költségét és időigényét külön számolják ki.</li>
+</ul>
+<h2>
+A leggyakrabban alkalmazott becslési módszerek:
+</h2>
+    <ol>
+    <li>Szakaszos becslés</li>
+    <p>A projektet kisebb egységekre osztják, és minden szakasznál újabb költség- és időbecslést végeznek. A fejlesztés során döntési pontokat (ún. fáziskapukat) határoznak meg, ahol a projekt előrehaladását kiértékelik.</p>
+    <p>Lépései:
+    <br>
+    Az egész projektre készül egy hozzávetőleges becslés, míg az első szakaszra részletesebb kalkuláció történik.
+    <br>
+    Az első szakasz lezárása után a következő szakasz előtt újra meghatározzák a költségkeretet. </p>
+    <p>
+    Előnyök:
+    <br>
+    A projekt bármikor leállítható, ha a költségek nem megfelelőek.
+    <br>
+    Csökkenti a kockázatot, mivel mindig csak az adott szakaszra terveznek.
+    <br>
+    Pontosabb, mert folyamatosan frissítik a becsléseket.</p>
+
+    <p>Hátrányok:
+    <br>
+    Váratlan költségek felmerülhetnek.
+    <br>
+    Ha költségtúllépés van, a felelősség kérdése problémát okozhat.
+    </p>
+
+
+    <li>Arányos becslés</li>
+    <p>Ez egy felülről lefelé történő megközelítés, ahol a teljes projektre vonatkozó becslés után az egyes szakaszok költségeit arányosan osztják el.</p>
+    <p>Lépései:
+    <br>
+    Először meghatározzák a teljes projekt várható költségét és időigényét.
+    <br>
+    Ezt követően az egyes szakaszokra arányos elosztást alkalmaznak, figyelembe véve a projektstruktúrát (WBS).</p>
+    <p>Előnyök:
+    <br>
+    Gyors és egyszerű módszer.
+    <br>
+    Pontosabbá tehető, ha szakaszos becsléssel együtt alkalmazzák.
+    <br>
+    Különösen nagyobb projektek esetén hatékony.</p>
+    <p>Hátrányok:
+    <br>
+    Kevésbé pontos, ha az egyes szakaszok költségei eltérnek az előzetes becslésektől.
+    <br>
+    Nem veszi figyelembe a projekt közbeni változásokat.</p>
+  
+    <li>Parametrikus becslés</li>
+    <p>A korábbi projektek tapasztalataira építve történik, és a feladatok ismétlődő jellegére alapozva számítják ki az idő- és költségigényt.</p>
+    <p>Lépései:
+    <br>
+    A projekthez kapcsolódó munkaegységeket azonosítják.
+    <br>
+    A múltbeli adatok alapján meghatározzák az egyes feladatok várható idő- és költségigényét.</p>
+    <p>Példa:
+    <br>
+    Ha egy munkás egy nap alatt 25 alkatrészt képes elkészíteni, akkor 250 darabhoz 10 napra van szükség (250/25=10).</p>
+    <p>Előnyök:
+    <br>
+    Gyors és könnyen alkalmazható.
+    <br>
+    Nagyobb, ismétlődő feladatoknál megbízható.</p>
+    <p>Hátrányok:
+    <br>
+    Nem minden projekt esetében használható megbízhatóan.
+    <br>
+    Ha az alapadatok pontatlanok, a becslés is hibás lesz.</p>
+  
+    <li>Lentről felfelé becslés</li>
+    <p>A legpontosabb becslési technika, amely minden egyes feladatra külön számítást végez, majd az eredményeket összeadja a teljes projektre vonatkozóan.</p>
+    <p>Lépései:
+    <br>
+    Minden egyes feladathoz meghatározzák az idő- és költségigényt.
+    <br>
+    Az egyes becsléseket összesítik, így kapják meg a teljes projekt költségvetését.</p>
+    <p>Előnyök:
+    <br>
+    Nagyon részletes, ezért pontos.
+    <br>
+    A projekt előrehaladtával finomítható.
+    <br>
+    Segít az erőforrások optimális elosztásában.</p>
+    <p>Hátrányok:
+    <br>
+    Időigényes és sok erőforrást igényel.
+    <br>
+    Megbízhatósága a rendelkezésre álló részletes információktól függ.</p>
+</ol>
+
 </body>
 </html>
